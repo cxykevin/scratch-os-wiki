@@ -8,7 +8,7 @@
 
 ## 关于COLID Studio
 
-是UP主 **`@孤行的3044**`** 所创立的小型工作室，BiliBili 小有名气。COLID 虽然不是英语单词，但是它是五个单词的结合。C：Creative 创造性的；O：Opened 开放的；L：Local 本地化的；I: Intelligent智慧的；D：Dreamful 梦想的。这是工作室的核心目标。
+是UP主 **`@孤行的3044`** 所创立的小型工作室，BiliBili 小有名气。COLID 虽然不是英语单词，但是它是五个单词的结合。C：Creative 创造性的；O：Opened 开放的；L：Local 本地化的；I: Intelligent智慧的；D：Dreamful 梦想的。这是工作室的核心目标。
 
 最成功的作品是由 Scratch 开发的 `COLID OS` 系列，颇受赞扬与支持。COLID OS 有自己的创新部分，能够在众多 Scratch 系统里做到独特与优秀。还有其他衍生产物。`COLID Pad OS`，动画流畅，稳定好用，适合移动端设备；`Cormix OS`，年轻化、多彩化，更适合生活场景和娱乐场景的轻度“操作系统”。这也是 COLID Studio 更新最多的系列，是目前工作室的工作重点。
 
