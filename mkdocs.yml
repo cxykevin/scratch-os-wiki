@@ -1,0 +1,7 @@
+site_name: Scratch OS Wiki
+nav:
+  - 主页: index.md
+  - 数据库:
+      - COLID Studio: ./colid-studio/colid-studio.md
+theme:
+  name: material
