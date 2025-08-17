@@ -1,0 +1,45 @@
+# .github/workflows/deploy.yml
+
+name: Deploy MkDocs to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main # 当推送到 main 分支时触发此工作流
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # 在最新的 Ubuntu 上运行
+
+    permissions:
+      contents: read # 允许读取仓库内容
+      deployments: write # 允许创建部署状态（Cloudflare Pages Action 需要）
+
+    steps:
+      - name: Checkout repository # 步骤1: 检出代码
+        uses: actions/checkout@v4
+
+      - name: Set up Python # 步骤2: 设置 Python 环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13" # 使用最新的 Python 3 版本
+
+      - name: Install MkDocs and Material Theme # 步骤3: 安装 MkDocs 和 Material 主题
+        run: |
+          pip install mkdocs mkdocs-material
+        # 使用 --only-binary :all: 强制使用 wheel 文件，避免编译问题并加速安装
+
+      - name: Build MkDocs project # 步骤4: 构建 MkDocs 项目
+        run: mkdocs build
+        # 默认情况下，MkDocs 会将构建输出到 'site/' 目录
+
+      - name: Deploy to Cloudflare Pages # 步骤5: 部署到 Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3 # 使用最新的 Wrangler Action
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }} # 从 GitHub Secrets 获取 API Token
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }} # 从 GitHub Secrets 获取 Account ID
+          projectName: scos-db # 替换为您的 Cloudflare Pages 项目名称
+          command: mkdocs build # 部署时执行的构建命令 (虽然我们已经在前面构建了，但 Wrangler Action 内部可能需要再次确认或执行)
+          directory: site # MkDocs 构建输出的目录
+          # branch: ${{ github.ref_name }} # 可选：如果需要根据分支名进行预览部署，可以添加此行
+          # githubToken: ${{ secrets.GITHUB_TOKEN }} # 可选：如果需要 GitHub Environments 或 PR 评论，可以添加此行
