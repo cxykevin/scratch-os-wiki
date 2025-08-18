@@ -3,5 +3,6 @@ nav:
   - 主页: index.md
   - 数据库:
       - COLID Studio: ./colid-studio/colid-studio.md
+      - MengteOS: ./MengteOS/MengteOS.md
 theme:
   name: material
