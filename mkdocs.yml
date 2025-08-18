@@ -4,5 +4,6 @@ nav:
   - 数据库:
       - COLID Studio: ./colid-studio/colid-studio.md
       - MengteOS: ./MengteOS/MengteOS.md
+      - floaOS: ./floaos/floa OS.md
 theme:
   name: material
