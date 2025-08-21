@@ -5,5 +5,7 @@ nav:
       - COLID Studio: ./colid-studio/colid-studio.md
       - MengteOS: ./MengteOS/MengteOS.md
       - floa OS: ./floa os/floa OS.md
-theme:
+  - 活动:
+      - scratchOS接力创作大赛: ./achive/hueuos.md
+  theme:
   name: material
