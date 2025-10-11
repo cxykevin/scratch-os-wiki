@@ -8,5 +8,6 @@ nav:
     - floa OS: ./floa os/floa OS.md
   - 活动:
     - scratchOS接力创作大赛: ./achive/hueuos.md
+  - 历史:
 theme:
   name: material
