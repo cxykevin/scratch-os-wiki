@@ -1,5 +1,7 @@
 # scratchOS 数据库
 
+![mian logo](scratch-os-wiki/docs/无标题.png)
+
 > 建站宗旨：
 >
 > 我们将把中国范围内（别问海外，肯定有别人）所有的 `scratchOS` 收集来，组件一个庞大的数据库，记载内容包括（系统、工作室、重大事迹）
